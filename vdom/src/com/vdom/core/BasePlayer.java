@@ -90,7 +90,8 @@ public abstract class BasePlayer extends Player implements GameEventListener {
 		{
 			if (!c.equals(Cards.marketSquare) && !c.equals(Cards.watchTower))
 			{
-    			if (c.equals(Cards.secretChamber) || c.equals(Cards.moat) || c.equals(Cards.horseTraders) || c.equals(Cards.beggar)) 
+				// Only play these cards once
+				if (c.equals(Cards.secretChamber) || c.equals(Cards.moat) || c.equals(Cards.beggar)) 
     			{
     				if (!reactedSet.contains(c)) 
     				{
